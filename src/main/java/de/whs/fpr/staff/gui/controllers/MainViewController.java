@@ -47,9 +47,18 @@ public class MainViewController {
                 .atStartOfDay(ZoneId.systemDefault())
                 .toInstant());
 
-        addStaff(new Employee("Chris", 1250, date1, 20));
-        addStaff(new Employee("Fred", 1000, date2, 5));
-        addStaff(new Manager("Dominik", 1500, date3, 3, 200));
+        Employee chris = new Employee("Chris", 1250, date1, 20);
+        Manager dominik = new Manager("Dominik", 1500, date3, 3, 200);
+        Employee fred = new Employee("Fred", 1000, date2, 5);
+
+        chris.addSupervisor(dominik);
+        chris.addProject("Testprojekt");
+        chris.addProject("Testprojekt 2");
+        fred.addProject("Testprojekt");
+
+        addStaff(chris);
+        addStaff(dominik);
+        addStaff(fred);
         addStaff(new Manager("Dominik", 1500, date3, 3, 200));
 
         Collections.sort(staff);

@@ -46,15 +46,6 @@ public abstract class Staff implements Comparable<Staff> {
     }
 
     /**
-     * Increases the salary of the staff member by a given percentage.
-     *
-     * @param percent The percentage to increase the salary by.
-     */
-    public void increaseSalaryByPercent(final double percent) {
-        salary = salary * (1 + (percent / 100));
-    }
-
-    /**
      * Gets the name of the staff member.
      *
      * @return The name of the staff member.
@@ -124,6 +115,15 @@ public abstract class Staff implements Comparable<Staff> {
      */
     public void setStaffId(int staffId) {
         this.staffId = staffId;
+    }
+
+    /**
+     * Increases the salary of the staff member by a given percentage.
+     *
+     * @param percent The percentage to increase the salary by.
+     */
+    public void increaseSalaryByPercent(final double percent) {
+        salary = salary * (1 + (percent / 100));
     }
 
     /**
