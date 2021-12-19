@@ -1,4 +1,4 @@
-package de.whs.fpr.staff.personnel;
+package de.whs.fpr.staff.personnel.types;
 
 import de.whs.fpr.staff.personnel.interfaces.HasProjects;
 import de.whs.fpr.staff.personnel.interfaces.HasSupervisors;

@@ -1,4 +1,4 @@
-package de.whs.fpr.staff.personnel;
+package de.whs.fpr.staff.personnel.types;
 
 import java.util.Date;
 import java.util.Objects;
