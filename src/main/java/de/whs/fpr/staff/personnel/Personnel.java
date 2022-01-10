@@ -40,6 +40,17 @@ public class Personnel {
         }
 
         staff.add((Staff) newStaff);
+
+        sortStaffById();
+    }
+
+    /**
+     * Removes a staff member from the staff list.
+     *
+     * @param staffMember The staff member to remove.
+     */
+    public void removeStaff(Staff staffMember) {
+        staff.remove(staffMember);
     }
 
     /**
@@ -57,6 +68,15 @@ public class Personnel {
         }
 
         return null;
+    }
+
+    /**
+     * Sorts the staff list by id (ascending).
+     */
+    public void sortStaffById() {
+        Comparator<Staff> staffComparator = Comparator.comparing(Staff::getStaffId);
+
+        staff.sort(staffComparator);
     }
 
     /**

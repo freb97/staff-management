@@ -1,6 +1,11 @@
 package de.whs.fpr.staff.personnel.types;
 
+import de.whs.fpr.staff.personnel.interfaces.HasProjects;
+import de.whs.fpr.staff.personnel.interfaces.HasSupervisors;
+
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -10,7 +15,17 @@ import java.util.Objects;
  *
  * @author Frederik Bußmann
  */
-public class Manager extends Staff {
+public class Manager extends Staff implements HasSupervisors<Staff>, HasProjects {
+    /**
+     * The list of supervisors for this staff member.
+     */
+    private final List<Staff> supervisors;
+
+    /**
+     * The list of projects for this staff member.
+     */
+    private final List<String> projects;
+
     /**
      * Bonus of the manager staff member.
      */
@@ -26,6 +41,9 @@ public class Manager extends Staff {
      */
     public Manager(String name, double salary, Date hiringDate, int staffId) {
         super(name, salary, hiringDate, staffId);
+
+        this.supervisors = new ArrayList<>();
+        this.projects = new ArrayList<>();
     }
 
     /**
@@ -38,9 +56,29 @@ public class Manager extends Staff {
      * @param bonus Bonus salary of the manager.
      */
     public Manager(String name, double salary, Date hiringDate, int staffId, double bonus) {
-        super(name, salary, hiringDate, staffId);
+        this(name, salary, hiringDate, staffId);
 
         this.bonus = bonus;
+    }
+
+    /**
+     * Gets the list of supervisors for this staff member.
+     *
+     * @return The list of supervisors.
+     */
+    @Override
+    public List<Staff> getSupervisors() {
+        return supervisors;
+    }
+
+    /**
+     * Gets the list of projects for this staff member.
+     *
+     * @return The list of projects.
+     */
+    @Override
+    public List<String> getProjects() {
+        return projects;
     }
 
     /**

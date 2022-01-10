@@ -18,6 +18,11 @@ import java.util.Objects;
  */
 public class MainApplication extends Application {
     /**
+     * Main stage instance.
+     */
+    public static Stage stage;
+
+    /**
      * Main scene instance.
      */
     public static Scene scene;
@@ -38,6 +43,8 @@ public class MainApplication extends Application {
      */
     @Override
     public void start(Stage stage) throws IOException {
+        MainApplication.stage = stage;
+
         initializeAppStage(stage);
     }
 

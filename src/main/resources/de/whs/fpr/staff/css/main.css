@@ -1,5 +1,14 @@
 #mainView {
-    -fx-alignment: center;
     -fx-padding: 20px;
     -fx-font-size: 14px;
+}
+
+#controls {
+    -fx-spacing: 15px;
+    -fx-padding: 0 0 15px 0;
+}
+
+#heading {
+    -fx-font-size: 22px;
+    -fx-padding: 0 0 20px 0;
 }

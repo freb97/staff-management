@@ -58,4 +58,4 @@ To run only the unit tests, run the maven test command:
 $ mvn test
 ```
 
-The generated test resulsts are accesible in the directory ```target/surefire-reports```.
+The generated test results are accessible in the directory ```target/surefire-reports```.

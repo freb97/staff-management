@@ -1,6 +1,6 @@
 title: "Staff Management"
 stage:
-  width: 380
-  height: 260
-  minWidth: 380
-  minHeight: 260
+  width: 720
+  height: 480
+  minWidth: 480
+  minHeight: 360
